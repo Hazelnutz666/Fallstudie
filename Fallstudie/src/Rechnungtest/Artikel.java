@@ -9,6 +9,7 @@ package Rechnungtest;
     String beschreibung;
     double preis;
     double mehrwertsteuer;
+    String name;
     
     
     //Konstruktoren
@@ -19,12 +20,29 @@ package Rechnungtest;
                 this.legeMehrwertsteuerFest(mehrwertsteuer);
             }
 
-            
+       Artikel(final double preis, final int artikelnr) {
+this.legePreisFest(preis);
+this.legeArtikelnummerFest(artikelnr);
+}
+       
+Artikel(final double preis, final int artikelnr, final String name) {
+this(preis, artikelnr);
+this.legeNameFest(name);
+}     
 
     //Methoden
     void legeArtikelnummerFest(final long neueNr) {
         this.artikelnr = neueNr;
     }
+    
+    String liefereName() {
+        return this.name;
+    }
+    
+    void legeNameFest(final String neuerName) { 
+        this.name = neuerName;
+    }
+
     
      void legeBeschreibungFest ( final String neueB)  {
         this.beschreibung= neueB;
@@ -49,6 +67,13 @@ package Rechnungtest;
         return this.preis;
     }
 
-
+void gebeInformationenAus() {
+    System.out.print("Artikel ");
+     System.out.println(this.liefereName()); 
+    System.out.print("Nr: "); 
+    System.out.println(this.liefereArtikelnummer()); 
+    System.out.print("Preis: "); 
+    System.out.println(this.lieferePreis()); 
       
+}
 }

@@ -50,7 +50,7 @@ class Rechnung {
            return this.betrag ;
        }
        
- double liefereMehrwertsteuer( ) { 
+ double liefereMehrwertsteuer() { 
      return this.mehrwertsteuer;
  }
 
@@ -103,8 +103,7 @@ this.postenAnzahl++;
                 double summe = 0;               
                 for (int i = 0; i < this.postenAnzahl; i++) {
                 Rechnungsposten rp = this.posten[i];
-                summe += rp.berechneGesamtbetrag() 
-                        * rp.liefereArtikel().liefereMehrwertsteuer(); 
+                summe += rp.berechneGesamtbetrag()* rp.liefereArtikel().liefereMehrwertsteuer(); 
                 } 
                return summe * (1 - this.liefereRabatt());
             }

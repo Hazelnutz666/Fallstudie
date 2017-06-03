@@ -8,7 +8,6 @@ public static void main (String[] args) {
  meineRechnung.legeRabattFest(0.3); 
  meineRechnung.gebeAus();
 
- 
     }
     
 }

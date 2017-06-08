@@ -1,5 +1,5 @@
 package Fallstudie;
-class Rechnung {
+public class Rechnung {
 
     //Klassenattribute
     static int naechsteRechnungsnummer = 10000;
@@ -17,6 +17,8 @@ class Rechnung {
         int postenAnzahl = 0;
     
       
+     
+ 
         
     //Konstruktoren
     Rechnung() {
@@ -42,7 +44,9 @@ class Rechnung {
             
         
   //Methoden
-       void legebetragFest (final double neuerBetrag){
+       
+       
+       void legeBetragFest (final double neuerBetrag){
            this.betrag = neuerBetrag;
        }
        

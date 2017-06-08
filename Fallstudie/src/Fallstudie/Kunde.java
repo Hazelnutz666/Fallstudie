@@ -6,8 +6,7 @@ class Kunde {
 	String name;
 	String anschrift;
 	
-	
-	
+		
         //Konstruktoren
    Kunde(final String name, final String anschrift) {
        this.legeNameFest(name);

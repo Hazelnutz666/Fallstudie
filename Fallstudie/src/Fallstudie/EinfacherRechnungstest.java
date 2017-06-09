@@ -3,7 +3,7 @@ package Fallstudie;
 
   
 
-//Rechnungstest für TEST...braucht noch Methode bestimmeRabatt
+//Rechnungstest für TEST
  class EinfacherRechnungstest {
 public static void main(String[] args) {
     

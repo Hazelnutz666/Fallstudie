@@ -1,5 +1,5 @@
 package Fallstudie;
-class Rechnung {
+public class Rechnung {
 
     //Klassenattribute
     static int naechsteRechnungsnummer = 10000;
@@ -9,14 +9,17 @@ class Rechnung {
     
     //Exemplarattribute(variablen)
 	double betrag;
-	double rabatt;
+	// TODO rabatt rausschmeisen, wird ersetzt durch bestimmeRABatt
+        double rabatt;
 	double mehrwertsteuer;
         Kunde rechnungsempfaenger;
-                //Rechnungsposten nicht mehr als 100
+       //Rechnungsposten nicht mehr als 100
         Rechnungsposten[] posten = new Rechnungsposten[Rechnung.MAX_POSTEN];
         int postenAnzahl = 0;
     
       
+     
+ 
         
     //Konstruktoren
     Rechnung() {
@@ -42,7 +45,24 @@ class Rechnung {
             
         
   //Methoden
-       void legebetragFest (final double neuerBetrag){
+       //bestimme Rabatt
+       public int bestimmeRabatt() {
+if (empfaenger.istPremiumkunde()) {
+if (betrag >= 200) {  
+return 10;
+}else{
+    return 5;
+}
+}else {
+    if (betrag >=100) {
+        return 5;
+    }else {
+        return 0;
+            }
+    }
+}
+       
+       void legeBetragFest (final double neuerBetrag){
            this.betrag = neuerBetrag;
        }
        
